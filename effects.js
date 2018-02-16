@@ -1,3 +1,4 @@
 $(document).ready(function(){
-const currentColor = document.getElementById("color");
+  // global variables declared
+  const currentColor = document.getElementById("color");
 });
