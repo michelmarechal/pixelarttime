@@ -7,30 +7,29 @@
   </head>
   <body>
 
-    <h1>Pixel Art with UdaciTyh!</h1>
+    <h1>Pixel Art with Udacity</h1>
 
     <h2>Select your color</h2>
-    <input type="color" id="colorSelected">
+    <input type="color" id="colorSelector" value="#000000">
 
     <h2>Select your width and heigth</h2>
     <form id="widthHeight">
       <label>Width:
-        <input id="width" type="number" min="1" max="30" value="1" required>
+        <input id="width" type="number" min="1" max="30" placeholder="1" required>
       </label>
 
       <label>Heigth:
           <input id="height" type="number" min="1" max="30" placeholder="1" required>
       </label>
-      <input type="submit">
+      <button id="botao">Gerar</button>
     </form>
 
     <h2>You design!</h2>
-    <table id="design"></table>
-    
-    <script
-  src="http://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    <div>
+      <table id="design">
+
+      </table>
+    </div>
     <script src="effects.js"></script>
   </body>
 </html>
