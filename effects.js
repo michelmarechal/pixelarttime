@@ -1,10 +1,10 @@
 window.onload = function() {  
   // Variables
   const color = document.querySelector('#colorSelector');
-  let widthVal = document.querySelector('#width').value;
-  let heightVal = document.querySelector('#height').value;
   const button = document.querySelector('#botao');
   const table = document.querySelector('#design');
+  let widthVal = document.querySelector('#width').value;
+  let heightVal = document.querySelector('#height').value;
   let currentColor, newRow, newCell;
   // Build table
   function builder(){
@@ -21,9 +21,8 @@ window.onload = function() {
       this.style.background = color.value;
     }
   }
-  // // Button configuration and grid rules
+  // Button configuration and grid rules
   button.onclick = function(event) {
-    document.querySelector('#yourDesign').classList.remove('hidden');
     event.preventDefault();
     if (widthVal.value < 1  || heightVal.value < 1) {
       alert("Width and height must be between 1 and 30");
@@ -32,5 +31,6 @@ window.onload = function() {
     } else { 
       builder();
     }
+    document.querySelector('#yourDesign').classList.remove('hidden');
   }
 }
