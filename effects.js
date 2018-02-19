@@ -1,28 +1,29 @@
 window.onload = function() {  
-  // Global Variables
+  // Variables
   const color = document.querySelector('#colorSelector');
-  const widthVal = document.querySelector('#width');
-  const heightVal = document.querySelector('#height');
+  let widthVal = document.querySelector('#width').value;
+  let heightVal = document.querySelector('#height').value;
   const button = document.querySelector('#botao');
-  let currentWidth;
-  let currentHeight;
-  let currentColor;
-
-  // // Build the table
+  const table = document.querySelector('#design');
+  let currentColor, newRow, newCell;
+  // Build table
   function builder(){
-    currentWidth = widthVal.value;
-    currentHeight = heightVal.value;
-    // Add rows and columns
-    for (let i = 1; i <= currentHeight; i++) {
-      document.querySelector('table').
+    table.innerHTML = '';
+    for (let i = 0; i < heightVal; i++) {
+      newRow = table.insertRow();
+      for (let j= 0; j < widthVal; j++ ) {
+        newCell = newRow.insertCell();
+        newCell.onclick = paintMe;
+      }
     }
-    
-
-
+    // Change cllicked cell color
+    function paintMe() {
+      this.style.background = color.value;
+    }
   }
-  
   // // Button configuration and grid rules
   button.onclick = function(event) {
+    document.querySelector('#yourDesign').classList.remove('hidden');
     event.preventDefault();
     if (widthVal.value < 1  || heightVal.value < 1) {
       alert("Width and height must be between 1 and 30");
@@ -30,15 +31,6 @@ window.onload = function() {
       alert("Width and height must be between 1 and 30");
     } else { 
       builder();
-    }
-  }
-
-  // // Change cllicked cell color
-  this.onclick = function() {
-    currentColor = color.value;
-    let clickedEl = this.document.querySelector('td');
-    if (clickedEl !== null) {
-      clickedEl.style.background = color.value;
     }
   }
 }
