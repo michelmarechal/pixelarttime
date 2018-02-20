@@ -14,7 +14,7 @@ window.onload = function() {
       newRow = table.insertRow();
       for (let j= 0; j < currentWidth; j++ ) {
         newCell = newRow.insertCell();
-        newCell.onclick = paintMe;
+        newCell.addEventListener('click', paintMe);
       }
     }
     // Change cllicked cell color
