@@ -23,7 +23,7 @@ window.onload = function() {
     }
   }
   // Button configuration and grid rules
-  button.onclick = function(event) {
+  button.addEventListener('click', function(event){ 
     table.innerHTML = '';
     event.preventDefault();
     if (widthVal.value < 1  || heightVal.value < 1) {
@@ -34,5 +34,5 @@ window.onload = function() {
       document.querySelector('#yourDesign').classList.remove('hidden');
       builder();
     }
-  }
+  });
 }
