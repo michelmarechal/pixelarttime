@@ -3,8 +3,8 @@ window.onload = function() {
   const color = document.querySelector('#colorSelector');
   const button = document.querySelector('#botao');
   const table = document.querySelector('#design');
-  let widthVal = document.querySelector('#width');
-  let heightVal = document.querySelector('#height');
+  const widthVal = document.querySelector('#width');
+  const heightVal = document.querySelector('#height');
   let currentWidth, currentHeight, newRow, newCell;
   // Build table
   function builder(){
