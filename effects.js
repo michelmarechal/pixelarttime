@@ -18,7 +18,6 @@ window.onload = function() {
              newCell.addEventListener('click', paintMe);
              j++;
         }
-      }
     }
     // Change cllicked cell color
     function paintMe(event) {
