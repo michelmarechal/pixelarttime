@@ -18,8 +18,8 @@ window.onload = function() {
       }
     }
     // Change cllicked cell color
-    function paintMe() {
-      this.style.background = color.value;
+    function paintMe(event) {
+      event.target.style.background = color.value;
     }
   }
   // Button configuration and grid rules
