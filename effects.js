@@ -12,9 +12,12 @@ window.onload = function() {
     currentWidth = widthVal.value;
     for (let i = 0; i < currentHeight; i++) {
       newRow = table.insertRow();
-      for (let j= 0; j < currentWidth; j++ ) {
-        newCell = newRow.insertCell();
-        newCell.addEventListener('click', paintMe);
+      let j = 0;
+      while (j < currentHeight) {
+             newCell = newRow.insertCell();
+             newCell.addEventListener('click', paintMe);
+             j++;
+        }
       }
     }
     // Change cllicked cell color
